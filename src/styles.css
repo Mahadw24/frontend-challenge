@@ -3,5 +3,32 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 text-gray-900;
+  @apply font-mono bg-gray-100 text-gray-900 m-0 p-0 !important;
+}
+
+
+/* Scrollbar styling for WebKit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Slim scrollbar */
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0b0b0; /* Gray color for the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #909090; /* Darker gray when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light background for the scrollbar track */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* For Firefox */
+.scrollable-container {
+  scrollbar-width: thin; /* Slim scrollbar */
+  scrollbar-color: #b0b0b0 #f0f0f0; /* Thumb and track colors */
 }
